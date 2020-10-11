@@ -36,9 +36,25 @@ if (x.matches) { // If media query matches
     console.log('mq funcionando')
     cardResume.classList.remove ('fadeInLeft')
     cardResume.classList.remove ('fadeOutLeft')
+    
 } 
     // else {
     //   document.body.style.backgroundColor = "pink";
     // }
   
-  
+ 
+///////scroll suave    
+const links = document.querySelectorAll(".menu-main-menu-container ul a");
+
+for (const link of links) {
+    link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+
+    document.querySelector(href).scrollIntoView({
+    behavior: "smooth"
+    });
+}
