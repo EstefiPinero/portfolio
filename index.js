@@ -13,21 +13,38 @@ let menuBtn = document.getElementById('menuBtn').addEventListener('click', () =>
 
 let cardE = document.getElementById('card-home-e');
 let cardResume = document.getElementById('card-home-resume');
+let cardWorks = document.getElementById('card-home-works');
+
 
 //ABOUT
 let aboutBtn = document.getElementById('aboutBtn').addEventListener('click', () => {
     cardResume.classList.replace('hidden', 'active');
     cardResume.classList.replace('fadeInLeft', 'fadeOutLeft')
     cardE.classList.replace('fadeOutLeft', 'fadeInLeft')
+    cardWorks.classList.replace('active', 'hidden')
 });
 
 //RESUME
 let resumeBtn = document.getElementById('resumeBtn').addEventListener('click', () => {
     
     cardResume.classList.replace('hidden', 'active')
-    cardE.classList.replace('fadeOutLeft', 'fadeInLeft')
     cardResume.classList.replace('fadeOutLeft', 'fadeInLeft')
+    //cardE.classList.replace('fadeOutLeft', 'fadeInLeft')
+    cardWorks.classList.replace('fadeOutLeft', 'fadeInLeft')
+    cardWorks.classList.replace('active', 'hidden')
 });
+
+//WORKS
+let worksBtn = document.getElementById('worksBtn').addEventListener('click', () => {
+    cardWorks.classList.replace('hidden', 'active')
+    cardWorks.classList.replace('fadeOutLeft', 'fadeInLeft')
+    cardResume.classList.replace('fadeInLeft', 'fadeOutLeft')
+    cardE.classList.replace('fadeInLeft', 'fadeOutLeft')
+});
+
+//CONTACT
+
+
 
 /// quitar media queries
 var x = window.matchMedia("(max-width: 1120px)")

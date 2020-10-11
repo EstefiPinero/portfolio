@@ -5,7 +5,22 @@ body {
     overflow: hidden;
     border: none;
     font-family: 'Kulim Park', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+}
+/*///// estilar la barra de desplazamiento */
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.5);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: transparent;
 }
 
 .background.gradient {
@@ -20,6 +35,13 @@ body {
 }
 
 /* //////configurar figuras animadas */
+.bg-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .bg-bubbles li {
     position: absolute;
     list-style: none;
@@ -28,14 +50,12 @@ body {
     height: 80px;
     background-color: rgba(255,255,255,.1);
     bottom: -320px;
-    -webkit-animation: square 50s infinite;
     animation: square 50s infinite;
-    -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
     border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
+}
+.bg-bubbles li:nth-child(1) {
+    left: 10%;
 }
 
 .bg-bubbles li:nth-child(6) {
@@ -46,7 +66,7 @@ body {
     animation-delay: 3s;
 }
 
-/* ////// */
+/* /////////// */
 .container {
     margin: 8vh 6vw;
     position: relative;
@@ -62,7 +82,7 @@ body {
     margin-right: 8px;
     position: relative;
     left: 0;
-    top: 15px;
+    /* top: 15px; */
     float: left;
     width: 72px;
     z-index: 100;
@@ -160,7 +180,7 @@ body {
 } */
 
 .header .top-menu ul li a {
-    padding: 13px 3px;
+    padding: 25px 3px;
     position: relative;
     overflow: hidden;
     display: block;
@@ -172,6 +192,7 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     transition: all .3s ease 0s;
+    text-decoration: none;
 }
 
 .header .top-menu ul li a:before {
@@ -186,6 +207,7 @@ body {
 }
 
 .header .top-menu ul li a .icon {
+    color: #78cc6d;
     margin: 0 auto;
     position: relative;
     top: 0;
@@ -194,7 +216,6 @@ body {
     width: 40px;
     height: 30px;
     font-size: 20px;
-    color: #323232;
     line-height: 30px;
     border-radius: 30px;
     transition: all .3s ease 0s;
@@ -266,7 +287,7 @@ body {
     margin: 0;
     display: inline-block;
     color: #78cc6d;
-    font-size: 16px;
+    font-size: 26px;
     line-height: 20px;
     height: 20px;
     font-weight: 400;
@@ -291,6 +312,10 @@ body {
     margin: 0 6px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.card-started .profile .social a, .content-sidebar .profile .social a i {
+    color: #323232;
 }
 
 /*  */
@@ -323,7 +348,7 @@ body {
     width: 100%;
     height: 70px;
     line-height: 70px;
-    font-size: 14px;
+    font-size: 18px;
     color: #323232;
     font-weight: 500;
     text-align: center;
@@ -400,15 +425,72 @@ body {
     font-size: 16px;
 }
 
+.border-line-v:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: -moz-radial-gradient(top,ellipse cover,#ddd 0%,rgba(255,255,255,0) 70%);
+    background: -webkit-radial-gradient(top,ellipse cover,#ddd 0%,rgba(255,255,255,0) 70%);
+    background: radial-gradient(ellipse at top,#ddd 0%,rgba(255,255,255,0) 70%);
+}
+
+.info-list ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+}
+
+.info-list ul li {
+    padding: 11px 0;
+    position: relative;
+    display: block;
+    vertical-align: top;
+    width: auto;
+    font-size: 18px;
+    word-break: break-word;
+    text-align: right;
+}
+
+.info-list ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: radial-gradient(ellipse at center,#ddd 0%,rgba(255,255,255,0) 70%);
+}
+.info-list ul li strong {
+    background: #78cc6d;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fefefe;
+    font-weight: 400;
+    padding: 3px;
+    border-radius: 5px;
+    float: left;
+}
+
 @media (min-width: 1024px) { 
     .row .col.col-d-6 {
         width: 49.998%;
     }
 }
 
+/* /////////////ABOUT CONTENT */
 .aboutContent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.aboutContent p {
+    font-size: 20px;
+    padding: 10px 50px 0px 20px;
 }
 
 .icons {
@@ -447,6 +529,41 @@ body {
     animation-name:fadeInLeft
 }
 
+/* ///////RESUME */
+
+.resumeContent {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ///////WORKS */
+
+.proyects, .moreProyects {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+}
+.proyects  p{
+    width: 500px;
+}
+
+.proyects img {
+    width: 500px;
+    border-radius: 6px;
+}
+
+.moreProyects img{
+    width: 500px;
+}
+.podcast,
+.gifos, 
+.eib {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* ANIMACIONES */
 @keyframes fadeInLeft{
     0%{
         opacity:0;
@@ -540,7 +657,7 @@ body {
         height: auto;
     }
     .container {
-        margin: 0 auto;
+        margin: 12vh 6vw;
         padding: 0 15px 0 100px;
         position: relative;
         top: 20px;
@@ -559,6 +676,9 @@ body {
         transform: none;
         margin-left: auto;
         margin-right: auto;
+    }
+    .podcast, .gifos, .eib, .toDoApp {
+        flex-direction: column;
     }
 }
 
