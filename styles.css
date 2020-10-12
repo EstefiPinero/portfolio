@@ -680,7 +680,7 @@ body {
         margin-right: auto;
     }
     .proyects img {
-        width: 90%;
+        width: 100%;
     }
     .podcast, .gifos, .eib, .todoapp {
         flex-direction: column;
@@ -755,6 +755,10 @@ body {
     }
     .aboutContent {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .proyects {
+        display: flex;
+        flex-direction: column;
     }
     
 }
