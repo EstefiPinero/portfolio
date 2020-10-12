@@ -543,9 +543,9 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 2fr);
 }
-.proyects  p{
+/* .proyects  p{
     width: 500px;
-}
+} */
 
 .proyects img {
     width: 50%;
