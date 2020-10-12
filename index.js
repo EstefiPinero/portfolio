@@ -14,6 +14,7 @@ let menuBtn = document.getElementById('menuBtn').addEventListener('click', () =>
 let cardE = document.getElementById('card-home-e');
 let cardResume = document.getElementById('card-home-resume');
 let cardWorks = document.getElementById('card-home-works');
+let cardContact = document.getElementById('card-home-contact')
 
 
 //ABOUT
@@ -51,9 +52,14 @@ var x = window.matchMedia("(max-width: 1120px)")
 
 if (x.matches) { // If media query matches
     console.log('mq funcionando')
-    cardResume.classList.remove ('fadeInLeft')
-    cardResume.classList.remove ('fadeOutLeft')
-    
+    cardE.classList.remove ('fadeInLeft');
+    cardE.classList.remove ('fadeOutLeft');
+    cardResume.classList.remove ('fadeInLeft');
+    cardResume.classList.remove ('fadeOutLeft');
+    cardWorks.classList.remove ('fadeInLeft');
+    cardWorks.classList.remove ('fadeOutLeft');
+    cardContact.classList.remove ('fadeInLeft');
+    cardContact.classList.remove ('fadeOutLeft');
 } 
     // else {
     //   document.body.style.backgroundColor = "pink";

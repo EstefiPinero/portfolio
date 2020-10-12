@@ -316,6 +316,7 @@ body {
 
 .card-started .profile .social a, .content-sidebar .profile .social a i {
     color: #323232;
+    font-size: 28px;
 }
 
 /*  */
@@ -536,6 +537,13 @@ body {
     flex-direction: column;
 }
 
+#strong {
+    float: none;
+}
+
+.h3 {
+    margin-left: 30px;
+}
 
 /* ///////WORKS */
 
@@ -550,6 +558,7 @@ body {
 .proyects img {
     width: 50%;
     border-radius: 6px;
+    margin: 15px;
 }
 
 .moreProyects img{
@@ -558,11 +567,12 @@ body {
 .podcast,
 .gifos, 
 .eib, 
-.todoapp {
+.todoapp, 
+.delilah {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
-
+    margin-bottom: 20px;
+    border-bottom: dotted;
 }
 
 /* ANIMACIONES */
@@ -682,8 +692,12 @@ body {
     .proyects img {
         width: 100%;
     }
-    .podcast, .gifos, .eib, .todoapp {
+     .gifos, .todoapp  {
         flex-direction: column;
+    }
+
+    .podcast,.eib, .delilah{
+        flex-direction: column-reverse;
     }
 
 }
