@@ -23,6 +23,8 @@ let aboutBtn = document.getElementById('aboutBtn').addEventListener('click', () 
     cardResume.classList.replace('fadeInLeft', 'fadeOutLeft')
     cardE.classList.replace('fadeOutLeft', 'fadeInLeft')
     cardWorks.classList.replace('active', 'hidden')
+    cardContact.classList.replace('active', 'hidden')
+    cardContact.classList.replace('active', 'hidden')
 });
 
 //RESUME
@@ -30,9 +32,10 @@ let resumeBtn = document.getElementById('resumeBtn').addEventListener('click', (
     
     cardResume.classList.replace('hidden', 'active')
     cardResume.classList.replace('fadeOutLeft', 'fadeInLeft')
-    //cardE.classList.replace('fadeOutLeft', 'fadeInLeft')
     cardWorks.classList.replace('fadeOutLeft', 'fadeInLeft')
     cardWorks.classList.replace('active', 'hidden')
+    cardContact.classList.replace('active', 'hidden')
+    cardContact.classList.replace('active', 'hidden')
 });
 
 //WORKS
@@ -41,10 +44,14 @@ let worksBtn = document.getElementById('worksBtn').addEventListener('click', () 
     cardWorks.classList.replace('fadeOutLeft', 'fadeInLeft')
     cardResume.classList.replace('fadeInLeft', 'fadeOutLeft')
     cardE.classList.replace('fadeInLeft', 'fadeOutLeft')
+    cardContact.classList.replace('active', 'hidden')
 });
 
 //CONTACT
-
+let contactBtn = document.getElementById('contactBtn').addEventListener('click', ()=> {
+    cardContact.classList.replace('hidden', 'active');
+    cardContact.classList.replace('fadeOutLeft', 'fadeInLeft')
+})
 
 
 /// quitar media queries

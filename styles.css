@@ -268,7 +268,7 @@ body {
     background: url('./images/estefania.jpg') no-repeat center center/cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: auto;
     border-radius: 4px 4px 0 0;
 }
 
@@ -284,7 +284,7 @@ body {
 
 .card-started .profile .subtitle, .content-sidebar .profile .subtitle, .content-sidebar .profile .typed-cursor, .card-started .profile .typed-cursor {
     position: relative;
-    margin: 0;
+    margin: 10px;
     display: inline-block;
     color: #78cc6d;
     font-size: 26px;
@@ -466,7 +466,7 @@ body {
     background: radial-gradient(ellipse at center,#ddd 0%,rgba(255,255,255,0) 70%);
 }
 .info-list ul li strong {
-    background: #78cc6d;
+    background: linear-gradient(to right, rgb(143, 186, 120), rgb(115, 195, 206));
     font-size: 18px;
     line-height: 20px;
     color: #fefefe;
@@ -573,6 +573,10 @@ body {
     justify-content: space-between;
     margin-bottom: 20px;
     border-bottom: dotted;
+}
+
+.contactContent {
+    margin-bottom: 50px;
 }
 
 /* ANIMACIONES */
