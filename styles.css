@@ -786,7 +786,7 @@ body {
         display: flex;
         flex-direction: column;
     }
-    .aboutContent {
+    .aboutContent , .experiencias{
         grid-template-columns: repeat(1, 1fr);
     }
 }
