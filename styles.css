@@ -477,7 +477,7 @@ body {
     font-weight: 400;
     padding: 6px;
     border-radius: 5px;
-    /* float: left; */
+    float: left;
 }
 
 @media (min-width: 1024px) { 
@@ -578,6 +578,7 @@ body {
     justify-content: space-between; */
     margin-bottom: 20px;
     border-bottom: dotted;
+    margin: 18px;
 }
 
 .contactContent {
